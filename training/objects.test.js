@@ -146,6 +146,24 @@ describe.skip("inStock", () => {
     hasDiscount: false,
   };
 
+  const item2 = {
+    name: "B",
+    price: 10,
+    hasDiscount: false,
+  };
+
+  const item3 = {
+    name: "c",
+    price: 10,
+    hasDiscount: false,
+  };
+
+  const item4 = {
+    name: "D",
+    price: 10,
+    hasDiscount: false,
+  };
+
   test("not in stock", () => {
     const inventory = [];
 
@@ -156,5 +174,17 @@ describe.skip("inStock", () => {
     const inventory = [item1];
 
     expect(inStock(item1, inventory)).toBe(true);
+  });
+
+  test("not in stock", () => {
+    const inventory = [item1, item2, item3];
+
+    expect(inStock(item4, inventory)).toBe(false);
+  });
+
+  test("in stock", () => {
+    const inventory = [item1, item2, item3, item4];
+
+    expect(inStock(item3, inventory)).toBe(true);
   });
 });
