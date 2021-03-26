@@ -1,5 +1,6 @@
 import { nPrimes, onlyNegatives } from "./arrays";
 
+//Wenn deine Funktion bereit ist, entferne den .skip teil von describe um die Tests zu aktivieren:
 describe.skip("nPrimes", () => {
   test("takes 1", () => {
     expect(nPrimes(1)).toStrictEqual([1]);
@@ -22,6 +23,7 @@ describe.skip("nPrimes", () => {
   });
 });
 
+//Wenn deine Funktion bereit ist, entferne den .skip teil von describe um die Tests zu aktivieren:
 describe.skip("onlyNegatives", () => {
   test("takes [1, 2, -1]", () => {
     expect(onlyNegatives([1, 2, -1])).toStrictEqual([-1]);
